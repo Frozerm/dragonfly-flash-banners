@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Dragonfly Banners",
+  "version": "1.0.0",
+  "description": "Позволяет устанавливать кастомные баннеры для профилей на сайте dragonfly-flash.com",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.dragonfly-flash.com/*",
+    "*://dragonfly-flash.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Настройки баннеров"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.dragonfly-flash.com/*",
+        "*://dragonfly-flash.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "popup.html",
+        "popup.css",
+        "popup.js"
+      ],
+      "matches": [
+        "*://*.dragonfly-flash.com/*",
+        "*://dragonfly-flash.com/*"
+      ]
+    }
+  ]
+}

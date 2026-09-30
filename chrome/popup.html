@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragonfly Banners</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="window">
+    <div class="title-bar">
+      <div class="title-bar-text">Dragonfly Banners</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    
+    <div class="window-body">
+      <fieldset>
+        <legend>Добавить баннер</legend>
+        <form id="add-banner-form">
+          <div class="input-group">
+            <label for="profile-url">Ссылка на профиль (или ID):</label>
+            <input type="text" id="profile-url" placeholder="https://www.dragonfly-flash.com/?id=User" required autocomplete="off">
+          </div>
+          <div class="input-group">
+            <label for="image-url">Ссылка на изображение:</label>
+            <input type="url" id="image-url" placeholder="https://example.com/image.png" required autocomplete="off">
+          </div>
+          <div class="button-group">
+            <button type="submit" class="btn-primary">Сохранить</button>
+          </div>
+        </form>
+      </fieldset>
+
+      <fieldset>
+        <legend>Сохраненные баннеры</legend>
+        <div id="banners-list" class="banners-list">
+          <div class="empty-state">Нет сохраненных баннеров.</div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  
+  <template id="banner-item-template">
+    <div class="banner-item">
+      <div class="banner-preview" style="background-image: url('');"></div>
+      <div class="banner-info">
+        <div class="profile-id">ID: <span></span></div>
+        <div class="image-url"><span></span></div>
+      </div>
+      <button class="btn-delete">Удалить</button>
+    </div>
+  </template>
+
+  <script src="popup.js"></script>
+</body>
+</html>

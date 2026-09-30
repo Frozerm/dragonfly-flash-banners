@@ -1,0 +1,233 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 100%;
+  font-family: Tahoma, "Segoe UI", Geneva, sans-serif;
+  font-size: 11px;
+}
+
+.window {
+  width: 100%;
+  background-color: #ece9d8;
+  border: 1px solid #0054e3;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+              2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.title-bar {
+  background: linear-gradient(to bottom, #0058e6 0%, #3a93ff 8%, #288eff 40%, #127dff 88%, #036ffc 100%);
+  padding: 3px 5px 3px 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  border-bottom: 1px solid #0054e3;
+}
+
+.title-bar-text {
+  color: white;
+  font-weight: bold;
+  font-size: 13px;
+  text-shadow: 1px 1px #0f1089;
+  letter-spacing: 0.5px;
+  padding-left: 4px;
+}
+
+.title-bar-controls {
+  display: flex;
+  gap: 2px;
+}
+
+.title-bar-controls button {
+  width: 21px;
+  height: 21px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 2px rgba(0,0,0,0.1), 0 1px 1px rgba(0,0,0,0.2);
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.title-bar-controls button[aria-label="Minimize"] {
+  background: linear-gradient(to bottom, #4c96fa, #2a69d8);
+  border-color: #1c52b0;
+}
+.title-bar-controls button[aria-label="Minimize"]::before {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 2px;
+  background: white;
+  margin: 10px auto 0;
+}
+
+.title-bar-controls button[aria-label="Maximize"] {
+  background: linear-gradient(to bottom, #4c96fa, #2a69d8);
+  border-color: #1c52b0;
+}
+.title-bar-controls button[aria-label="Maximize"]::before {
+  content: "";
+  display: block;
+  width: 9px;
+  height: 7px;
+  border: 1px solid white;
+  border-top-width: 2px;
+  margin: 3px auto 0;
+}
+
+.title-bar-controls button[aria-label="Close"] {
+  background: linear-gradient(to bottom, #e36a6a 0%, #dc4242 40%, #d82b2b 88%, #d01d1d 100%);
+  border-color: #ffffff;
+  color: white;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1;
+}
+.title-bar-controls button[aria-label="Close"]::before {
+  content: "✕";
+  text-shadow: 1px 1px rgba(0,0,0,0.3);
+}
+
+.window-body {
+  padding: 10px;
+}
+
+fieldset {
+  border: 1px solid #d4d0c8;
+  border-radius: 3px;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #ece9d8;
+  box-shadow: -1px -1px 0 #fff, 1px 1px 0 #fff;
+  min-width: 0;
+}
+
+legend {
+  color: #0033cc;
+  padding: 0 4px;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 3px;
+  color: #000;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 3px 4px;
+  border: 1px solid #7f9db9;
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+  font-size: 11px;
+}
+
+.input-group input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+.button-group {
+  text-align: right;
+  margin-top: 5px;
+}
+
+button {
+  background: linear-gradient(to bottom, #f2f2f2 0%, #ebebeb 40%, #dddddd 100%);
+  border: 1px solid #003c74;
+  border-radius: 3px;
+  padding: 3px 12px;
+  font-family: Tahoma, sans-serif;
+  font-size: 11px;
+  color: #000;
+  cursor: pointer;
+  min-width: 75px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+button:active {
+  background: linear-gradient(to bottom, #cccccc 0%, #dddddd 100%);
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+button.btn-primary {
+  border: 2px solid #0054e3;
+  padding: 2px 11px;
+}
+
+.banners-list {
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #7f9db9;
+  background: #fff;
+  padding: 2px;
+}
+
+.empty-state {
+  padding: 10px;
+  color: #666;
+}
+
+.banner-item {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-bottom: 1px dotted #ccc;
+}
+
+.banner-item:last-child {
+  border-bottom: none;
+}
+
+.banner-item:hover {
+  background-color: #316ac5;
+  color: #fff;
+}
+
+.banner-preview {
+  width: 40px;
+  height: 20px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #000;
+  margin-right: 8px;
+}
+
+.banner-info {
+  flex: 1 1 0%;
+  min-width: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.profile-id {
+  font-weight: bold;
+}
+
+.image-url {
+  font-size: 9px;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  display: block;
+}
+
+.banner-item:hover .image-url {
+  color: #c0dcc0;
+}
+
+.btn-delete {
+  min-width: 50px;
+  padding: 1px 5px;
+  flex-shrink: 0;
+}
