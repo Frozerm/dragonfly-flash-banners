@@ -1,2 +1,27 @@
-# dragonfly-flash-banners
-Browser extensions for browser for set custom banners in users profiles
+# Dragonfly-flash banners
+
+Это расширение позваляет ставить кастомные баннера в профили
+
+## Установка
+
+#### Для браузеров, основанных на firefox
+Установить из официального источника Mozila Add-ons: [Link](https://addons.mozilla.org/en-US/firefox/addon/dragonfly-banners/)
+
+#### Для браузеров, основанных на Chrome
+Зайти в релизы проекта и скачать Zip архив для chrome: [Link](https://github.com/Frozerm/dragonfly-flash-banners/releases/tag/extension)
+
+Далее распкауйте архив в удобное вам место, после чего зайдите в ваш браузер: 
+1. "Расширения" -> "Управление расширениями"
+2. В правом верхнем углу страницы включите переключатель "Режим разработчика"
+3. В левом верхнем углу появится кнопка "Загрузить распакованное расширение" - нажмите её
+4. В открывшемся окне проводника выберите папку с распакованными файлами расширения и подтвердите выбор.
+
+## Использование
+
+ 1. Зайдите в свой профиль и слева в боковом меню нажмите на кнопку "Баннера"
+ 2. В появившемся окне указываете ссылку на профиль и ссылку на картинку, которую хотите видеть как баннер профиля
+ 3. Нажимаете на "Сохранить"
+
+![DragonFly](https://dragonfly-flash.com/photousers/905da25c-cd75-41c0-b46f-9377ade3ba94.png)
+![DragonFly](https://dragonfly-flash.com/photousers/6fa76222-d324-4a73-84af-2c5fcc852e69.png)
+![DragonFly](https://dragonfly-flash.com/photousers/779edb0a-9666-4df7-b5e8-9286315558fb.png)
